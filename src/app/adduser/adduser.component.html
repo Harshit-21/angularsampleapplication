@@ -1,3 +1,71 @@
-<p>
-  adduser works!
-</p>
+<div class="container">
+  <h2>Add User Form</h2>
+  <p>The form is done using Template Driven Forms</p>
+  <form #userTemplateForm="ngForm">
+
+    {{userTemplateForm.value | json}}
+    <br>
+    <hr>
+    {{user | json}}
+
+    <div class="form-group">
+      <label for="usr">First Name:</label>
+      <input type="text" required #name1="ngModel" [class.is-invalid]="name1.invalid"class="form-control " [(ngModel)]="user.fname" name="fname">
+    
+    <small *ngIf="name1.invalid">the username is mandatory</small>
+    <small *ngIf="name1.dirty" class="text-danger" >the username must contain 3 digits</small>
+    <small *ngIf=false>we can show name1.errors.required and set the error message according to it</small>
+
+    </div>
+    <div class="form-group">
+      <label for="usr">Last Name:</label>
+      <input type="text" class="form-control" ngModel name="lname">
+    </div>
+    <div class="form-group">
+      <label for="usr">Email Id:</label>
+      <input type="text" class="form-control" ngModel name="email">
+    </div>
+    <div class="form-group">
+      <label for="usr">City:</label>
+      <input type="text" class="form-control" ngModel name="city">
+    </div>
+    <div class="form-group">
+      <label for="usr">State:</label>
+      <input type="text" class="form-control" ngModel name="state">
+    </div>
+    <div class="form-group">
+      <label for="usr">Country:</label>
+      <input type="text" class="form-control" ngModel name="country">
+    </div>
+
+    <div class="form-group">
+      <label for="usr">Age:</label>
+      <input type="text" class="form-control" ngModel name="age">
+    </div>
+
+    <div class="form-group">
+
+
+      <label class="radio-inline">
+        <input [(ngModel)]="user.gender" name="gender" type="radio" value="male">MALE
+      </label>
+      <label class="radio-inline">
+        <input [(ngModel)]="user.gender" name="gender" type="radio" value="female">FEMALE
+      </label>
+
+    </div>
+
+
+    <div class="form-group">
+
+      <select #drop (change)="getcvalue(drop)" class="form-control" ngModel name="dropdownvalue">
+        <option value="option1"> OPTION 1</option>
+        <option value="option2"> OPTION 2</option>
+        <option value="option3"> OPTION 3</option>
+      </select>
+    </div>
+    <button type="button" class="btn btn-primary">Submit</button>
+
+
+  </form>
+</div>

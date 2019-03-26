@@ -5,66 +5,19 @@
     <!-- Links -->
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link" href="#">Add User </a>
+        <a class="nav-link" routerLink="/addusertemplate" routerLinkActive="abc">Add User Template</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">List Of Users 2</a>
+        <a class="nav-link" routerLink="/userlist" routerLinkActive="abc">List Of Users</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Testing</a>
+        <a class="nav-link" routerLink="adduserreactive" routerLinkActive="abc">Add User Reactive</a>
       </li>
     </ul>
 
   </nav>
 </div>
 
-<div class="container">
-  <h2>Add User Form</h2>
-  <p>The form is done using Reactive Forms</p>
-  <form>
-    <div class="form-group">
-      <label for="usr">First Name:</label>
-      <input type="text" class="form-control">
-    </div>
-    <div class="form-group">
-      <label for="usr">Last Name:</label>
-      <input type="text" class="form-control">
-    </div>
-    <div class="form-group">
-      <label for="usr">Email Id:</label>
-      <input type="text" class="form-control">
-    </div>
-    <div class="form-group">
-      <label for="usr">City:</label>
-      <input type="text" class="form-control">
-    </div>
-    <div class="form-group">
-      <label for="usr">State:</label>
-      <input type="text" class="form-control">
-    </div>
-    <div class="form-group">
-        <label for="usr">Country:</label>
-        <input type="text" class="form-control">
-      </div>
 
-      <div class="form-group">
-          <label for="usr">Age:</label>
-          <input type="text" class="form-control">
-        </div>
-
-      <button type="button" class="btn btn-primary">Submit</button>
-
-
-  </form>
-</div>
-
-
-<div class="container abc">
-
-    <ul class="list-group">
-        <li class="list-group-item list-group-item-success">First item</li>
-        <li class="list-group-item list-group-item-info">Second item</li>
-        <li class="list-group-item list-group-item-warning">Third item</li>
-        <li class="list-group-item list-group-item-danger">Fourth item</li>
-      </ul>
-</div>
+<!-- this is used to render the routing  -->
+<router-outlet></router-outlet>
