@@ -20,7 +20,7 @@ export class AdduserComponent implements OnInit {
   public getcvalue(val:any){
     console.log(val);
     
-    console.log("this is the value cjhdfjdfh");
+    console.log("this is the value harshit");
     
   }
 
