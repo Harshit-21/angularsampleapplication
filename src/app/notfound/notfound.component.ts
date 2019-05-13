@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NotfoundComponent implements OnInit {
 
+  public data:boolean=true;
   constructor() { }
 
   ngOnInit() {
