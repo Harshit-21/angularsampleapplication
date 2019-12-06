@@ -14,7 +14,7 @@ export class AdduserComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-	  console.log('ABC');
+	  console.log('123');
   }
 
 
